@@ -1,63 +1,65 @@
 # 🎨 CodeShade — LeetCode Theme Customizer
 
-Customize your LeetCode coding experience with beautiful themes.
+Customize your LeetCode coding experience with 10 beautiful themes.
 
-CodeShade is a lightweight Chrome extension that lets you personalize the appearance of LeetCode problem pages with 10 carefully selected themes. Whether you prefer a dark coding environment, a clean light interface, or high contrast, CodeShade lets you choose a look that suits your workflow.
+CodeShade is a lightweight Chrome extension that lets you personalize the appearance of LeetCode problem pages. Choose from a collection of dark, light, and high-contrast themes to create a coding environment that suits your preferences.
 
-<p align="center">
-  <strong>10 Themes · Lightweight · Manifest V3 · Privacy-Focused</strong>
-</p>
+**10 Themes · Manifest V3 · Lightweight · Privacy-Focused**
 
 ---
 
 ## ✨ Features
 
-- 🎨 **10 Beautiful Themes** — Choose from a curated collection of themes.
-- 🌙 **Dark & Light Modes** — Switch between dark and light appearances.
-- ⚡ **Instant Theme Switching** — Change your theme through the extension interface.
-- 💾 **Persistent Preferences** — Your settings are saved locally.
-- 🧩 **LeetCode-Focused Styling** — Customize individual problem pages without intentionally restyling unrelated pages.
-- 💻 **Editor-Friendly Styling** — Designed to preserve LeetCode's native Monaco editor syntax highlighting.
-- ⚙️ **Dedicated Settings Page** — Manage appearance preferences in one place.
-- 🔒 **Privacy-Focused** — Designed to work locally without requiring an account.
+- 🎨 **10 Themes** — Choose from a curated collection of themes.
+- 🌙 **Dark & Light Modes** — Switch between different visual styles.
+- ⚡ **Theme Switching** — Customize your LeetCode experience.
+- 💾 **Persistent Preferences** — Save your appearance settings locally.
+- 🧩 **Problem-Page Styling** — Designed to customize individual LeetCode problem pages.
+- 💻 **Editor-Friendly Styling** — Designed to preserve LeetCode's native Monaco syntax highlighting.
+- ⚙️ **Settings Page** — Manage appearance preferences.
+- 🔒 **Privacy-Focused** — Designed to work without requiring a separate account.
 
 ## 🎭 Available Themes
 
-CodeShade includes the following 10 themes:
-
 | Theme | Style |
 |---|---|
-| Midnight | Deep, dark coding environment |
-| Dracula | Dark purple-inspired interface |
+| Midnight | Deep, dark appearance |
+| Dracula | Purple-inspired dark theme |
 | Nord | Cool, muted colors |
-| Monokai | Colorful, developer-oriented palette |
+| Monokai | Colorful coding palette |
 | Ocean | Blue-inspired appearance |
 | Forest | Green-inspired appearance |
 | Sunset | Warm, sunset-inspired colors |
-| Clean Light | Minimal light interface |
-| Solarized Dark | Solarized dark color palette |
+| Clean Light | Minimal light appearance |
+| Solarized Dark | Solarized dark palette |
 | High Contrast | Enhanced visual contrast |
-
-*Actual appearance may vary slightly depending on LeetCode's current interface.*
 
 ## 📸 Screenshots
 
-Screenshots will be added after testing the extension in Chrome.
+### CodeShade Preview
 
-<!-- Add screenshots here after capturing the actual extension UI. -->
+![CodeShade Screenshot 1](images/Screenshot%20%28430%29.png)
+
+### Theme Selection
+
+![CodeShade Screenshot 2](images/Screenshot%20%28433%29.png)
+
+### Settings Page
+
+![CodeShade Screenshot 3](images/Screenshot%20%28434%29.png)
 
 ## 🚀 Installation
 
-CodeShade is distributed through GitHub and can be installed manually in Google Chrome.
+CodeShade can be installed manually in Google Chrome.
 
-### Step 1: Download
+### 1. Download the Extension
 
-1. Open the [CodeShade GitHub repository](https://github.com/YOUR_USERNAME/CodeShade).
-2. Go to **Releases**.
-3. Download the latest `CodeShade-<version>-production.zip` file.
-4. Extract the ZIP into a folder on your computer.
+1. Open the [CodeShade GitHub repository](https://github.com/ChiragRewaliya336/CodeShade).
+2. Navigate to **Releases**.
+3. Download the latest production ZIP.
+4. Extract the ZIP into a folder.
 
-### Step 2: Load into Chrome
+### 2. Install in Chrome
 
 1. Open Google Chrome.
 2. Navigate to `chrome://extensions`.
@@ -65,35 +67,37 @@ CodeShade is distributed through GitHub and can be installed manually in Google 
 4. Click **Load unpacked**.
 5. Select the extracted folder containing `manifest.json`.
 
-CodeShade should now appear in your Chrome extensions list.
-
-### Step 3: Start Customizing
+### 3. Start Using CodeShade
 
 1. Open a LeetCode problem page.
 2. Open the CodeShade extension.
-3. Select your preferred theme.
-4. Open Settings if you want to manage your appearance preferences.
+3. Choose your preferred theme.
+4. Open Settings to manage appearance preferences.
 
-**Note:** This is a manually installed extension, not a Chrome Web Store installation. Updates may require downloading and installing a newer release.
+**Note:** This is a manually installed extension. Updates may require downloading and installing a newer release.
 
 ## 🛠️ Built With
 
 - **HTML5** — Interface structure
-- **CSS3** — Themes and styling
+- **CSS3** — Theme styling
 - **JavaScript** — Extension functionality
-- **Chrome Extensions Manifest V3** — Browser extension platform
-- **Chrome Storage API** — Local preference persistence
+- **Chrome Extensions Manifest V3** — Extension platform
+- **Chrome Storage API** — Preference persistence
 
-The extension uses vanilla JavaScript without a frontend framework.
+CodeShade uses vanilla JavaScript without a frontend framework.
 
 ## 📁 Project Structure
 
 ```text
-CodeShade/
+Code-Shada/
 ├── content/
 │   ├── content.css
 │   ├── content.js
 │   └── selectors.js
+├── images/
+│   ├── Screenshot (430).png
+│   ├── Screenshot (433).png
+│   └── Screenshot (434).png
 ├── options/
 │   ├── options.html
 │   ├── options.css
@@ -106,11 +110,66 @@ CodeShade/
 │   ├── storage.js
 │   ├── themes.js
 │   └── validation.js
-├── tests/
-├── scripts/
 ├── manifest.json
-├── package.json
 ├── PRIVACY.md
-├── SECURITY.md
-├── CHANGELOG.md
 └── README.md
+```
+
+*The structure above highlights the main extension files. Your repository may also contain tests, scripts, and other development files.*
+
+## 🔐 Privacy
+
+CodeShade is designed to store appearance preferences locally and does not require a separate user account.
+
+For additional information, read [PRIVACY.md](PRIVACY.md).
+
+Review the extension's source code and permissions before installation.
+
+## 🧪 Testing
+
+During release preparation, the project reported:
+
+- 17 automated tests passed.
+- Manifest validation passed.
+- JavaScript syntax checks passed.
+- Static security checks passed.
+
+These automated checks do not replace manual browser testing. Theme behavior, settings persistence, editor readability, and page restrictions should also be verified in Chrome.
+
+## 🤝 Contributing
+
+Contributions, bug reports, and suggestions are welcome.
+
+1. Fork the repository.
+2. Create a feature branch.
+3. Make your changes.
+4. Run the available tests.
+5. Submit a pull request explaining your changes.
+
+## 🐛 Reporting Issues
+
+If you find a bug, open an issue in the GitHub repository.
+
+Include:
+- A description of the problem
+- Steps to reproduce it
+- Your Chrome version
+- Screenshots, if relevant
+
+Never include passwords, authentication tokens, or other sensitive information in issue reports.
+
+## 📄 License
+
+A license has not been specified in this README. Add a `LICENSE` file before granting others explicit permission to reuse, modify, or distribute the project.
+
+## 👨‍💻 Author
+
+**Chirag**
+
+GitHub: [ChiragRewaliya336](https://github.com/ChiragRewaliya336)
+
+---
+
+<p align="center">
+  Made for a more personalized coding experience. 💻
+</p>
