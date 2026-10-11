@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "CodeShade — LeetCode Theme Customizer",
+  "version": "1.0.0",
+  "description": "Customize the LeetCode interface with local themes and editor styling.",
+  "action": { "default_popup": "popup/popup.html", "default_title": "CodeShade" },
+  "options_page": "options/options.html",
+  "permissions": ["storage"],
+  "host_permissions": ["https://leetcode.com/*"],
+  "content_scripts": [{
+    "matches": ["https://leetcode.com/*"],
+    "js": ["content/selectors.js", "content/content.js"],
+    "css": ["content/content.css"],
+    "run_at": "document_start"
+  }]
+}

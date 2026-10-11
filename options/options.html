@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>CodeShade settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="layout">
+    <header class="topbar">
+      <a class="brand" href="options.html" aria-label="CodeShade settings home"><span class="brand-mark" aria-hidden="true">C</span><span><strong>CodeShade</strong><small>Settings</small></span></a>
+      <span class="version" id="version">Loading version…</span>
+    </header>
+    <main>
+      <section class="intro"><p class="eyebrow">LEETCODE PERSONALIZATION</p><h1>Make the workspace yours.</h1><p>Choose a comfortable palette for the LeetCode problem page. Changes save automatically on this device.</p></section>
+
+      <section class="card" aria-labelledby="appearance-title">
+        <div class="card-heading"><div><p class="eyebrow">APPEARANCE</p><h2 id="appearance-title">Theme</h2><p>Current theme: <strong id="current-theme">Loading…</strong></p></div></div>
+        <label class="field-label" for="theme">Color theme</label>
+        <select id="theme" name="theme">
+          <optgroup label="Light"><option value="clean-light">Clean Light</option></optgroup>
+          <optgroup label="Dark">
+            <option value="midnight">Midnight</option><option value="dracula">Dracula</option><option value="nord">Nord</option><option value="monokai">Monokai</option><option value="ocean">Ocean</option><option value="forest">Forest</option><option value="sunset">Sunset</option><option value="solarized-dark">Solarized Dark</option>
+          </optgroup>
+          <optgroup label="High contrast"><option value="high-contrast">High Contrast</option></optgroup>
+        </select>
+        <p class="field-help">All ten built-in themes are available. Theme changes apply immediately to open problem pages.</p>
+      </section>
+
+      <section class="card support-grid" aria-labelledby="about-title">
+        <div><p class="eyebrow">HELP &amp; SUPPORT</p><h2>Need a hand?</h2><p>Contact the developer to report a bug or request a feature.</p><p><a href="mailto:chiragwork0306@gmail.com">chiragwork0306@gmail.com</a></p><p class="field-help">Developer: CodeShade Team</p></div>
+        <div><p class="eyebrow">ABOUT</p><h2 id="about-title">Local by design</h2><p>CodeShade supports <a href="https://leetcode.com/" target="_blank" rel="noopener noreferrer">leetcode.com</a>. Theme preferences are stored locally in Chrome; they are not sent to a server.</p><p><a href="../PRIVACY.md" target="_blank" rel="noopener noreferrer">Read the privacy policy</a></p><button id="reset-all" class="button danger" type="button">Reset all preferences</button></div>
+      </section>
+      <p id="status" class="status" role="status" aria-live="polite">Loading preferences…</p>
+    </main>
+    <footer>CodeShade is an independent project and is not affiliated with LeetCode.</footer>
+  </div>
+  <script type="module" src="options.js"></script>
+</body>
+</html>

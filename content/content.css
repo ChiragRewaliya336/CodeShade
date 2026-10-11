@@ -1,0 +1,101 @@
+/* All overrides are gated by the namespaced root attribute. */
+:root[data-codeshade-theme] {
+  color-scheme: dark;
+  --cs-background:#121212; --cs-surface:#181818; --cs-surface-secondary:#1e1e1e;
+  --cs-text:#f5f5f5; --cs-text-secondary:#b8b8b8; --cs-border:#3a3a3a;
+  --cs-accent:#f0b90b; --cs-accent-contrast:#121212; --cs-focus-ring:#f0b90b;
+  --cs-editor-background:#121212; --cs-scrollbar:#666666;
+}
+:root[data-codeshade-theme="clean-light"] { color-scheme:light; }
+:root[data-codeshade-theme="high-contrast"] { color-scheme:dark; }
+:root[data-codeshade-theme] body { background-color:var(--cs-background)!important; color:var(--cs-text)!important; }
+:root[data-codeshade-theme] main,
+:root[data-codeshade-theme] [role="main"] { background-color:var(--cs-background); color:var(--cs-text); }
+:root[data-codeshade-theme] nav,
+:root[data-codeshade-theme] aside,
+:root[data-codeshade-theme] [role="dialog"],
+:root[data-codeshade-theme] [role="menu"],
+:root[data-codeshade-theme] [role="tooltip"] { background-color:var(--cs-surface)!important; color:var(--cs-text)!important; border-color:var(--cs-border)!important; }
+:root[data-codeshade-theme] [role="menuitem"],
+:root[data-codeshade-theme] [role="option"] { color:var(--cs-text)!important; }
+/* LeetCode's description_content marker anchors the actual problem pane.
+   content.js marks only its ancestor chain, avoiding blanket div rules. */
+:root[data-codeshade-theme] [data-codeshade-problem-surface="panel"] {
+  background-color:var(--cs-surface)!important;
+  color:var(--cs-text)!important;
+  border-color:var(--cs-border)!important;
+}
+:root[data-codeshade-theme] [data-codeshade-problem-surface="content"] {
+  background-color:var(--cs-surface-secondary)!important;
+  color:var(--cs-text)!important;
+}
+/* LeetCode uses utility classes and occasional inline backgrounds on nested
+   description wrappers. Keep the override inside the description subtree. */
+:root[data-codeshade-theme] [data-codeshade-problem-surface="content"] [class*="bg-"]:not(button):not([role="button"]):not([role="tab"]):not([aria-selected="true"]):not([aria-pressed="true"]):not([class*="badge"]):not([class*="difficulty"]),
+:root[data-codeshade-theme] [data-codeshade-problem-surface="content"] [style*="background-color"]:not(button):not([role="button"]):not([role="tab"]):not([aria-selected="true"]):not([aria-pressed="true"]):not([class*="badge"]):not([class*="difficulty"]) {
+  background-color:var(--cs-surface-secondary)!important;
+}
+:root[data-codeshade-theme] [data-codeshade-problem-surface] h1:not(.monaco-editor *),
+:root[data-codeshade-theme] [data-codeshade-problem-surface] h2:not(.monaco-editor *),
+:root[data-codeshade-theme] [data-codeshade-problem-surface] h3:not(.monaco-editor *),
+:root[data-codeshade-theme] [data-codeshade-problem-surface] strong:not(.monaco-editor *),
+:root[data-codeshade-theme] [data-codeshade-problem-surface] small:not(.monaco-editor *),
+:root[data-codeshade-theme] [data-codeshade-problem-surface] p:not(.monaco-editor *),
+:root[data-codeshade-theme] [data-codeshade-problem-surface] span:not(.monaco-editor *),
+:root[data-codeshade-theme] [data-codeshade-problem-surface] li:not(.monaco-editor *),
+:root[data-codeshade-theme] [data-codeshade-problem-surface] label:not(.monaco-editor *),
+:root[data-codeshade-theme] [data-codeshade-problem-surface] dt:not(.monaco-editor *),
+:root[data-codeshade-theme] [data-codeshade-problem-surface] dd:not(.monaco-editor *),
+:root[data-codeshade-theme] [data-codeshade-problem-surface] input:not(.monaco-editor *),
+:root[data-codeshade-theme] [data-codeshade-problem-surface] output:not(.monaco-editor *),
+:root[data-codeshade-theme] [data-codeshade-problem-surface] samp:not(.monaco-editor *) {
+  color:var(--cs-text)!important;
+}
+:root[data-codeshade-theme] [data-codeshade-problem-surface] pre:not(.monaco-editor *),
+:root[data-codeshade-theme] [data-codeshade-problem-surface] blockquote:not(.monaco-editor *),
+:root[data-codeshade-theme] [data-codeshade-problem-surface] table:not(.monaco-editor *) {
+  background-color:var(--cs-surface-secondary)!important;
+  color:var(--cs-text)!important;
+  border-color:var(--cs-border)!important;
+}
+:root[data-codeshade-theme] [data-codeshade-problem-surface] code:not(.monaco-editor *) { color:var(--cs-text)!important; }
+/* Problem routes can render test examples outside the description pane.
+   These semantic code/text elements follow theme tokens while Monaco stays untouched. */
+:root[data-codeshade-theme] main pre:not(.monaco-editor, .monaco-editor *),
+:root[data-codeshade-theme] main code:not(.monaco-editor, .monaco-editor *),
+:root[data-codeshade-theme] main samp:not(.monaco-editor, .monaco-editor *),
+:root[data-codeshade-theme] main output:not(.monaco-editor, .monaco-editor *) {
+  color:var(--cs-text)!important;
+}
+:root[data-codeshade-theme="high-contrast"] main label:not(.monaco-editor, .monaco-editor *),
+:root[data-codeshade-theme="high-contrast"] main output:not(.monaco-editor, .monaco-editor *),
+:root[data-codeshade-theme="high-contrast"] main samp:not(.monaco-editor, .monaco-editor *) {
+  color:#ffffff!important;
+}
+:root[data-codeshade-theme] [data-codeshade-problem-surface] button,
+:root[data-codeshade-theme] [data-codeshade-problem-surface] [role="tab"] {
+  color:var(--cs-text)!important;
+  border-color:var(--cs-border)!important;
+}
+:root[data-codeshade-theme] [data-codeshade-problem-surface] ::-webkit-scrollbar-thumb { background:var(--cs-scrollbar); }
+:root[data-codeshade-theme] a { color:var(--cs-text)!important; }
+:root[data-codeshade-theme] a:hover,
+:root[data-codeshade-theme] a[aria-current="page"],
+:root[data-codeshade-theme] [role="tab"][aria-selected="true"] { color:var(--cs-accent)!important; }
+:root[data-codeshade-theme] nav a,
+:root[data-codeshade-theme] nav button,
+:root[data-codeshade-theme] nav [role="button"] { color:var(--cs-text)!important; }
+:root[data-codeshade-theme] button,
+:root[data-codeshade-theme] [role="button"] { border-color:var(--cs-border); }
+:root[data-codeshade-theme] button:not([class*="bg-"]):not([style*="background"]),
+:root[data-codeshade-theme] [role="button"]:not([class*="bg-"]) { color:var(--cs-text); }
+:root[data-codeshade-theme] input:not(.monaco-editor):not(.monaco-editor *),
+:root[data-codeshade-theme] textarea:not(.monaco-editor):not(.monaco-editor *),
+:root[data-codeshade-theme] [role="textbox"]:not(.monaco-editor):not(.monaco-editor *) { background-color:var(--cs-surface)!important; color:var(--cs-text)!important; border-color:var(--cs-border)!important; }
+:root[data-codeshade-theme] :focus-visible:not(.monaco-editor):not(.monaco-editor *) { outline:2px solid var(--cs-focus-ring)!important; outline-offset:2px; }
+:root[data-codeshade-theme] :not(.monaco-editor):not(.monaco-editor *)::selection { background:var(--cs-accent); color:var(--cs-accent-contrast); }
+:root[data-codeshade-theme] :not(.monaco-editor):not(.monaco-editor *)::-webkit-scrollbar-thumb { background:var(--cs-scrollbar); }
+/* LeetCode's editor uses Monaco; these scoped rules style its frame and surface only. */
+:root[data-codeshade-theme][data-codeshade-editor="true"] .monaco-editor,
+:root[data-codeshade-theme][data-codeshade-editor="true"] .monaco-editor-background,
+:root[data-codeshade-theme][data-codeshade-editor="true"] .monaco-editor .margin { background-color:var(--cs-editor-background)!important; }

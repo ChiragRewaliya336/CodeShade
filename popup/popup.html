@@ -1,0 +1,7 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CodeShade</title><link rel="stylesheet" href="popup.css"></head>
+<body><main class="app"><header><div class="brand-mark" aria-hidden="true">C</div><div><h1>CodeShade</h1><p>Make LeetCode yours</p></div><label class="switch"><input id="enabled" type="checkbox"><span class="track"></span><span class="sr-only">Enable CodeShade styling</span></label></header>
+<section aria-labelledby="themes-heading"><div class="section-heading"><h2 id="themes-heading">Themes</h2><span id="current-theme" class="current"></span></div><div id="themes" class="theme-grid" role="group" aria-label="Choose a theme"></div></section>
+<section class="custom-card"><div class="section-heading"><div><h2>Custom palette</h2><p>Build a palette from six colors</p></div></div><div id="colors" class="color-grid"></div><div class="actions"><button id="save-custom" class="primary">Save custom theme</button><button id="reset" class="quiet">Reset</button></div></section>
+<label class="editor-row"><span><strong>Editor surface</strong><small>Match the code editor background</small></span><input id="editor" type="checkbox"></label>
+<p id="status" class="status" role="status" aria-live="polite"></p><footer><button id="settings" class="link-button">Settings &amp; help</button><span>Local preferences</span></footer></main><script type="module" src="popup.js"></script></body></html>
